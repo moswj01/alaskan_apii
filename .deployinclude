@@ -1,0 +1,22 @@
+# Production Deployment Files Only
+# This script creates a clean deployment package
+
+# Files to include in deployment:
+index.js
+package.json
+package-lock.json
+auth.js
+dbUtils.js
+orderRoutes.js
+refundRoutes.js
+Dockerfile
+.dockerignore
+.env.production
+
+# SQL files for database setup
+*.sql
+
+# Documentation (optional)
+README.md
+EASYPANEL_DEPLOY.md
+CORS_FIX_GUIDE.md

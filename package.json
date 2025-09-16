@@ -1,0 +1,28 @@
+{
+  "name": "alaskan_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "dev:local": "node index.js",
+    "dev:remote": "node -r dotenv/config index.js dotenv_config_path=.env.development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "mysql",
+    "express",
+    "jwt"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Alaskan API for game top-up management with MySQL and JWT authentication",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.3"
+  }
+}
