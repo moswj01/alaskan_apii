@@ -1,7 +1,9 @@
 # Production Deployment Files Only
+
 # This script creates a clean deployment package
 
 # Files to include in deployment:
+
 index.js
 package.json
 package-lock.json
@@ -14,9 +16,11 @@ Dockerfile
 .env.production
 
 # SQL files for database setup
-*.sql
+
+\*.sql
 
 # Documentation (optional)
+
 README.md
 EASYPANEL_DEPLOY.md
 CORS_FIX_GUIDE.md

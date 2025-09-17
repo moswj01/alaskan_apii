@@ -11,15 +11,9 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Enable CORS for all routes
+// Enable CORS for localhost development
 app.use(cors({
-  origin: [
-    'http://localhost:4200', 
-    'http://localhost:58238', 
-    'https://alaskans.store',
-    'https://alaskans.com',
-    'https://kkc-alaskan-api.ruhy1d.easypanel.host'
-  ],
+  origin: true, // Allow all origins for development
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -35,9 +29,7 @@ const db = mysql.createPool({
   password: process.env.MYSQL_PASSWORD || '',
   database: process.env.MYSQL_DATABASE || 'game_topup',
   connectionLimit: 10,
-  connectTimeout: 30000,
-  acquireTimeout: 30000,
-  timeout: 30000
+  connectTimeout: 30000
 });
 
 // Test MySQL connection
